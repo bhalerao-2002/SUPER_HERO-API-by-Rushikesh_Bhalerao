@@ -3,11 +3,11 @@
 const SUPERHERO_TOKEN = '10223569763528853'
 const BASE_URL = `https://superheroapi.com/api.php/${SUPERHERO_TOKEN}`
 
-const newHeroButton = document.getElementById('newHeroButton')
+const randombtn = document.getElementById('random-btn')
 
 const heroImageDiv = document.getElementById('heroImage')
 
-const searchButton = document.getElementById('searchButton')
+const searchbtn = document.getElementById('search-btn')
 
 const searchInput = document.getElementById('searchInput')
 
@@ -37,7 +37,7 @@ const statToEmoji = {
 const showHeroInfo = (character) => {
   const name = `<h2>${character.name}</h2>`
 
-  const img = `<img src="${character.image.url}" height=200 width=200/>`
+  const img = `<img src="${character.image.url}" height=400 width=400/>`
   
   const stats = Object.keys(character.powerstats).map(stat => {
     return `<p>${statToEmoji[stat]} ${stat.toUpperCase()}: ${character.powerstats[stat]}</p>`
@@ -63,6 +63,6 @@ const randomHero = () => {
   return Math.floor(Math.random() * numberOfHeroes) + 1
 }
 
-newHeroButton.onclick = () => getSuperHero(randomHero())
+randombtn.onclick = () => getSuperHero(randomHero())
 
-searchButton.onclick = () => getSearchSuperHero(searchInput.value)
+searchbtn.onclick = () => getSearchSuperHero(searchInput.value)
