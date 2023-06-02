@@ -9,12 +9,15 @@
 </head>
 
 <body style=background:radial-gradient(circle,#33ccff,#ff99cc);>
-  <h2>🌟 Super Hero App 🌟<h6>by bhalerao</h6></h2>
+  <h2 class="heading">🌟 Super Hero App 🌟<h6 class="by">by bhalerao</h6></h2>
+  
   <p>You can search for a super hero like "batman" or "thanos" or... You can generate a random hero</p>
-  <input id='searchInput' type="text">
-  <button id='searchButton'>Search</button>
-  <button id='newHeroButton'>Random Hero</button>
-  </br>
+  <div class="input-container">
+    <input id='searchInput' type="text" name="search" placeholder="Enter Your Hero's Name...">
+    <button id='search-btn'>Search</button>
+    <button id='random-btn'>Random Hero</button>
+    </br>
+  </div>
   <div id='heroImage'><img src="" alt=""></div>
   <script src="script.js"></script>
 </body>
